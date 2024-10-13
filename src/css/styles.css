@@ -1,7 +1,12 @@
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 body {
 	font-family: 'Poppins', sans-serif;
     background-image: url('../img/background.png');
     background-size: cover;
+    background-position: center;
 }
 
 body::before {
@@ -16,11 +21,31 @@ body::before {
     backdrop-filter: blur(8px);
 }
 
+header {
+    position: fixed;
+     justify-content: space-between;
+    padding: 25px;
+    top: 0;
+    left: 0;
+    display:block;
+}
+
+header .logo {
+    width: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+header .logo:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
 main {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+
 }
 
 .pokedevs {
@@ -155,77 +180,28 @@ main {
 }
 
 
-/* body {
-    transition: background-color 0.3s, color 0.3s;
-}
-
-
-body {
-    background-color: #f5f5f5; 
-    color: #333; 
-    transition: background-color 0.3s, color 0.3s;
-}
-
-
-body.dark-theme {
-    background-color: #1e1e1e; 
-    color: #f5f5f5; 
-}
-
-
-.theme-toggle {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: #ddd;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-}
-
-
-.theme-icon {
-     width: 30px;
-    height: 30px;
-    display: none;
+footer{
+    display:block;
+    position:fixed;
+    width:100%;
+    bottom:0vh;
+    left:0;
+    text-align:center;
+    padding: 20px 0;
 
 }
 
-
-#sun-icon {
-    display: block;
+.proj-pokedev {
+    text-align: center;
+    font-size: 20px;
+    bottom: 10;
+    color: #ffffff;
 }
 
-
-#sun-icon, #moon-icon {
-    transition: opacity 0.3s;
-}
-
-
-body.dark-theme .theme-toggle {
-    background-color: #555; 
-}
-
-
-.theme-toggle:hover {
-    background-color: #ccc;
-} */
-
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 25px;
-}
-
-header .logo {
+.proj-pokedev p img {
     width: 30px;
-    transition: 0.2s ease-in-out;
 }
 
-header .logo:hover {
-    transform: scale(1.05);
+.proj-pokedev a {
     cursor: pointer;
 }
